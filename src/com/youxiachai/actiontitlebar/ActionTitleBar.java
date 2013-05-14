@@ -1,7 +1,5 @@
 package com.youxiachai.actiontitlebar;
 
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import com.youxiachai.actiontitlebar.R;
 
 public class ActionTitleBar extends AbsActionTitleBar {
 	private ViewGroup mActionView;
@@ -48,7 +45,7 @@ public class ActionTitleBar extends AbsActionTitleBar {
 		
 		return mActionbar;
 	}
-	public ActionTitleBar(Activity context, ActionTitleBarOption ao) {
+	ActionTitleBar(Activity context, ActionTitleBarOption ao) {
 		super(context, ao);
 		init();
 	}
