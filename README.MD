@@ -1,7 +1,13 @@
 #ActionTitleBar#
 It is base ActionBar Impl
 
+If you want to use actionbar like titlebar.
 
-current no stable don't fork
+This is your best choose.
+
+but current no stable don't use
+
 
 #TODO list#
+1. impl Tab nav.
+2. improve actionbartitlebar create method.
