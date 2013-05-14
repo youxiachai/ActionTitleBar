@@ -1,4 +1,4 @@
-package com.youxiachai.actionbarcompat;
+package com.youxiachai.actiontitlebar;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
@@ -11,13 +11,13 @@ import android.widget.SpinnerAdapter;
  * @author youxiachai
  *
  */
-public abstract class AbsActionBarCompat extends ActionBar{
+public abstract class AbsActionTitleBar extends ActionBar{
 	protected final static int WINDOWNTOP = 0;
 	protected Activity mContext;
 	protected PackageManager mPkgManager;
-	protected ActionBarOption mActionBarOption;
+	protected ActionTitleBarOption mActionBarOption;
 	protected int navigationMode = -1;
-	public AbsActionBarCompat(Activity context, ActionBarOption ao) {
+	public AbsActionTitleBar(Activity context, ActionTitleBarOption ao) {
 		this.mContext = context;
 		this.mPkgManager = context.getPackageManager();
 		this.mActionBarOption = ao;

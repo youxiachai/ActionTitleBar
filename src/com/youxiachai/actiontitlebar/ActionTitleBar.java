@@ -1,4 +1,4 @@
-package com.youxiachai.actionbarcompat;
+package com.youxiachai.actiontitlebar;
 
 import java.util.HashMap;
 
@@ -14,19 +14,19 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import com.youxiachai.actiontitlebar.R;
 
-public class ActionBarCompat extends AbsActionBarCompat {
+public class ActionTitleBar extends AbsActionTitleBar {
 	private ViewGroup mActionView;
 	
 //	public static HashMap<String, ActionBarCompat> tempActionBar = new HashMap<String, ActionBarCompat>();
 	public static String actString = "";
-	public static ActionBarCompat mActionbar;
-	public static ActionBarOption mActionOption = new ActionBarOption();
+	public static ActionTitleBar mActionbar;
+	public static ActionTitleBarOption mActionOption = new ActionTitleBarOption();
 	
-	public static ActionBarCompat getActionBar(Activity act){
+	public static ActionTitleBar getActionBar(Activity act){
 		String tempString = act.toString();
 		if(!actString.equals(tempString)){
 			Log.d("actionbar", "init" + tempString);
-			mActionbar = new ActionBarCompat(act, mActionOption);
+			mActionbar = new ActionTitleBar(act, mActionOption);
 			actString =  tempString;
 		}else{
 			Log.d("actionbar", "reuse" + actString + "currs" + tempString);
@@ -34,13 +34,13 @@ public class ActionBarCompat extends AbsActionBarCompat {
 		return mActionbar;
 	}
 	
-	public static ActionBarCompat getActionBar(Activity context, ActionBarOption ao){
+	public static ActionTitleBar getActionBar(Activity context, ActionTitleBarOption ao){
 		//用于复用对象
 		String tempString = context.toString();
 		if(!actString.equals(tempString)){
 			Log.d("actionbar", "init" + tempString);
 			mActionOption =ao;
-			mActionbar = new ActionBarCompat(context, ao);
+			mActionbar = new ActionTitleBar(context, ao);
 			actString =  tempString;
 		}else{
 			Log.d("actionbar", "reuse" + actString + "currs" + tempString);
@@ -48,7 +48,7 @@ public class ActionBarCompat extends AbsActionBarCompat {
 		
 		return mActionbar;
 	}
-	public ActionBarCompat(Activity context, ActionBarOption ao) {
+	public ActionTitleBar(Activity context, ActionTitleBarOption ao) {
 		super(context, ao);
 		init();
 	}
@@ -216,7 +216,7 @@ public class ActionBarCompat extends AbsActionBarCompat {
 		return mActionView;
 	}
 
-	public ActionBarOption getActionOption() {
+	public ActionTitleBarOption getActionOption() {
 		return mActionBarOption;
 	}
 	
