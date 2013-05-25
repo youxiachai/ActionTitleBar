@@ -1,6 +1,8 @@
 package com.youxiachai.utils;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 
 /**
@@ -17,4 +19,16 @@ public class AppInfo {
 	
 	//应用程序所对应的包名  
 	public String pkgName;
+	
+	
+	public static CharSequence getAppName(Context ctx){
+		return ctx.getPackageManager().getApplicationLabel(ctx.getApplicationInfo());
+	}
+	
+	public static Drawable getAppLogo(Context ctx){
+		PackageManager pm = ctx.getPackageManager();
+		return pm.getApplicationIcon(ctx.getApplicationInfo());
+	}
+	
+	
 }
