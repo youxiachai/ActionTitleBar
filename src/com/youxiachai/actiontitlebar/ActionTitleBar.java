@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
+import android.view.v4.ActionMode;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
@@ -18,13 +19,15 @@ public class ActionTitleBar extends AbsActionTitleBar {
 		return getActionBar(act, null);
 	}
 	
-	public static ActionTitleBar getActionBar(Activity act, ActionTitleMenu ao){
+	public static ActionTitleBar getActionBar(Activity act, ActionTitleMenu titleMenu){
 		//if act is create actionbar not re create
 		int nowActCode = act.toString().hashCode();
 		if(acthash != nowActCode){
 			Log.d("actionbar", "init" + nowActCode);
-			if(ao != null){
-				mTitleMenu =ao;
+			if(titleMenu != null){
+				mTitleMenu =titleMenu;
+			}else{
+				mTitleMenu = new ActionTitleMenu();
 			}
 			mActionbar = new ActionTitleBar(act);
 			acthash =  nowActCode;
@@ -56,13 +59,13 @@ public class ActionTitleBar extends AbsActionTitleBar {
 	 * @param v
 	 */
 	 void addActionView(View v) {
-		getActionViews().addView(v);
+		getActionViewsContext().addView(v);
 	}
 	
 	/**get right menu
 	 * @return
 	 */
-	 ViewGroup getActionViews() {
+	 ViewGroup getActionViewsContext() {
 		View menuContext = findView(mBasicActionView, R.id.action_bar_context);
 		// if first use stub
 		if(menuContext instanceof ViewStub){
@@ -93,7 +96,11 @@ public class ActionTitleBar extends AbsActionTitleBar {
 	}
 
 
-	public ActionTitleMenu getActionMenu() {
+	public ActionTitleMenu getActionViews() {
+		return mTitleMenu;
+	}
+	
+	public ActionMode getActionMode(){
 		return mTitleMenu;
 	}
 	

@@ -48,12 +48,18 @@
             android:visibility="gone" />
     </LinearLayout>
 
-    <ViewStub
+   <ViewStub
         android:id="@+id/action_bar_menu"
         android:inflatedId="@+id/action_bar_menu"
         android:layout="@layout/action_bar_menu"
-        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
          />
+       
+          
+
+          
+          
 
 </LinearLayout>

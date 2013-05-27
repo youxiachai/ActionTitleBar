@@ -9,12 +9,15 @@ This is your best choose.
 
 but current no stable don't use
 
+support android 2.2+
 
+#screenshots#
+![](actiontitlebarexample.png)
 #中文#
 对于android actionbar 的兼容实现，目前用得最多的就是[ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock) 那么为什么还要重复造一个轮子呢?在实际项目开发中，[ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock) 的实现无疑是目前最强大的actionbar 兼容实现，
 但是，强大并不意味着好用。
 
-1. [ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock) 的完全兼容实现是一种侵入式实现，对于一些老项目而言这种实现完全不能用。
+1. [ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock) 的完全兼容一种侵入式实现，对于一些老项目而言这种实现完全不能用。
 
 2. [ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock)太大了，有时候，我们并不需要完全的actionbar功能，但是，我们却要为我们不需要的功能进行买单（导致打包后的安装包增大了几百K）。
 
@@ -50,9 +53,12 @@ notic:
 
 2. 对于4.x，如果要更好的显示，可以选择在主题，关闭原actionbar的显示。
 
+
+
 ##TODO list##
 1. impl Tab nav.
 2. impl custom view
 3. impl sub title
 4. support menu config
 5. support custom theme
+6. support actionmode

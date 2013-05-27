@@ -21,7 +21,7 @@ public abstract class AbsActionTitleBar extends ActionBar {
 	// app title view pos
 	protected final static int WINDOWNTOP = 0;
 	protected Activity mContext;
-	protected static ActionTitleMenu mTitleMenu = new ActionTitleMenu();;
+	protected static ActionTitleMenu mTitleMenu;
 	protected int navigationMode = -1;
 	
 	protected OnClickListener onBackListener = new OnClickListener() {
