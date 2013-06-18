@@ -1,6 +1,7 @@
 package com.youxiachai.actiontitlebar;
 
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,11 @@ public class ActionTitleBar extends AbsActionTitleBar {
 	public static int acthash ;
 	public static ActionTitleBar mActionbar;
 	
-	public static ActionTitleBar getActionBar(Activity act){
+	public static ActionTitleBar getActionBar(FragmentActivity act){
 		return getActionBar(act, null);
 	}
 	
-	public static ActionTitleBar getActionBar(Activity act, ActionTitleMenu titleMenu){
+	public static ActionTitleBar getActionBar(FragmentActivity act, ActionTitleMenu titleMenu){
 		//if act is create actionbar not re create
 		int nowActCode = act.toString().hashCode();
 		if(acthash != nowActCode){
@@ -37,7 +38,7 @@ public class ActionTitleBar extends AbsActionTitleBar {
 		
 		return mActionbar;
 	}
-	ActionTitleBar(Activity context) {
+	ActionTitleBar(FragmentActivity context) {
 		super(context);
 		mTitleMenu.setActionTitleBar(this);
 		buildMenuContent();

@@ -3,16 +3,11 @@ package com.youxiachai.actiontitlebar;
 import android.app.Activity;
 import android.app.v4.ActionBar;
 import android.graphics.drawable.Drawable;
-import android.os.Handler;
-import android.util.Log;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
 import com.youxiachai.utils.AppInfo;
@@ -26,7 +21,7 @@ import com.youxiachai.utils.AppInfo;
 public abstract class AbsActionTitleBar extends ActionBar {
 	// app title view pos
 	protected final static int WINDOWNTOP = 0;
-	protected Activity mContext;
+	protected FragmentActivity mContext;
 	protected static ActionTitleMenu mTitleMenu;
 	protected int navigationMode = -1;
 
@@ -46,12 +41,12 @@ public abstract class AbsActionTitleBar extends ActionBar {
 	// base actionbar view
 	protected ViewGroup mBasicActionView;
 
-	public AbsActionTitleBar(Activity context) {
+	public AbsActionTitleBar(FragmentActivity context) {
 		this.mContext = context;
 		build();
 	}
 
-	public Activity getActiviy() {
+	public FragmentActivity getActivity() {
 		return mContext;
 	}
 
