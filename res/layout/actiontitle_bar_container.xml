@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
-
+	
+    
     <RelativeLayout
         android:id="@+id/action_bar_container"
         style="@style/actionBarContent"
@@ -10,7 +11,7 @@
 
         <include
             android:id="@+id/action_bar"
-            layout="@layout/action_bar" />
+            layout="@layout/actiontitle_bar" />
 
         <ViewStub
             android:id="@+id/action_bar_context"
@@ -18,7 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout="@layout/action_bar_context" />
+            android:layout="@layout/actiontitle_bar_context" />
+        
+        
     </RelativeLayout>
-
-</FrameLayout>
+	
+    <include 
+        android:id="@+id/actiontitle_bar_nav"
+        layout="@layout/actiontitle_bar_nav_tabs"
+        />
+    
+</RelativeLayout>

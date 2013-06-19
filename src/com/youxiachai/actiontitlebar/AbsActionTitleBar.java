@@ -82,7 +82,7 @@ public abstract class AbsActionTitleBar extends ActionBar {
 	 */
 	protected void build() {
 		mBasicActionView = (ViewGroup) mContext.getLayoutInflater().inflate(
-				R.layout.action_bar_container, null);
+				R.layout.actiontitle_bar_container, null);
 		// windowView.removeViews(0, 1);
 		// 获得顶层view 的第一级,并且把actionview 设置进去
 		// windowView.addView(getView());
@@ -345,77 +345,8 @@ public abstract class AbsActionTitleBar extends ActionBar {
 		return 0;
 	}
 
-	@Override
-	public Tab newTab() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
-	@Override
-	public void addTab(Tab tab) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void addTab(Tab tab, boolean setSelected) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void addTab(Tab tab, int position) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void addTab(Tab tab, int position, boolean setSelected) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void removeTab(Tab tab) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void removeTabAt(int position) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void removeAllTabs() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void selectTab(Tab tab) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Tab getSelectedTab() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tab getTabAt(int index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int getTabCount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	/*
 	 * 获得actionbar 高度

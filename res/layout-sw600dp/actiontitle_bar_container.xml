@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/action_bar_container"
+        style="@style/actionBarContent"
+       >
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/actiontitle_bar" />
+
+        <ViewStub
+            android:id="@+id/action_bar_context"
+            android:inflatedId="@+id/action_bar_context"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout="@layout/actiontitle_bar_context" />
+    </RelativeLayout>
+
+</FrameLayout>

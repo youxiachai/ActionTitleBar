@@ -15,7 +15,7 @@
             android:id="@+id/up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:src="@drawable/ic_ab_back_holo_light" />
 
         <ImageView
@@ -49,9 +49,9 @@
     </LinearLayout>
 
    <ViewStub
-        android:id="@+id/action_bar_menu"
-        android:inflatedId="@+id/action_bar_menu"
-        android:layout="@layout/action_bar_menu"
+        android:id="@+id/action_bar_nav_list"
+        android:inflatedId="@+id/action_bar_nav_list"
+        android:layout="@layout/actiontitle_bar_menu"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
