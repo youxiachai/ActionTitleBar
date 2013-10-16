@@ -62,3 +62,6 @@ notic:
 4. support menu config
 5. support custom theme
 6. support actionmode
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/youxiachai/actiontitlebar/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
